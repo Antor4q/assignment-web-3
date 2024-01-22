@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hockey's</title>
+   
     <!-- tailwind and daisy ui cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,12 +17,57 @@
             font-family: 'Manrope', sans-serif;
         }
     </style>
+    <!-- custom colors -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary-color': '#FF4240',
+              'dark-black': '#131318',
+              'dark-gray': '#13131863',
+            }
+          }
+        }
+      }
+    </script>
 </head>
-<body class="max-w-[144px] mx-auto font-manrope">
+<body class="max-w-[1440px] mx-auto font-manrope">
     <header>
-        <nav>
-
+      <!-- nav bar -->
+        <nav class="lg:w-[1170px] mx-auto my-12">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Pages</a></li>
+                        <li><a>Blog</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                  </div>
+                  <a class="btn btn-ghost text-2xl lg:text-4xl font-extrabold">Hockey<span class="text-primary-color">’</span>s</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1 text-[#424247]">
+                    <li><a class="text-primary-color">Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Pages</a></li>
+                    <li><a>Blog</a></li>
+                    <li><a>Contact</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end ">
+                  <img src="Images/Frame.png" alt="" class="mr-6 hidden lg:flex">
+                  <a class="btn bg-primary-color text-white text-[18px] font-bold lg:px-6 px-4 rounded-[8px] ">Get Ticket</a>
+                </div>
+              </div>
         </nav>
+        <!-- banner section -->
     </header>
     <main>
 
